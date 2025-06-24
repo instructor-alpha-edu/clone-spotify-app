@@ -20,7 +20,7 @@ body {
 }
 
 .wrapper {
-  flex-grow: 1;
+  flex: 1;
   height: 100%;
   padding: 60px 16px 16px;
   border-radius: 12px;

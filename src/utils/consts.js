@@ -1,5 +1,4 @@
-export const ACCESS_TOKEN =
-  "BQBzkF2VCezmIXVUdJhOUK209xtdKwJkJbVIGvdNhY82BM2GUGTLVk4ua8OhlFvzBUWIIbvE5DzNvXpkT76J8WrEYHGXLMLwUhODkk-9qECQRBmqW7gayOi4NGAuSrNcIti_JnmZFzs";
+export const ACCESS_TOKEN = "";
 export const albumLinks = [
   "78bpIziExqiI9qztvNFlQu",
   "2ODvWsOgouMbaA5xf0RkJe",
