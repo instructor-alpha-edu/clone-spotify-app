@@ -1,47 +1,42 @@
 import { useEffect, useState } from "react";
-import { ACCESS_TOKEN, albumLinks } from "../utils/consts";
-import AlbumItem from "./AlbumItem";
+import { ACCESS_TOKEN, artistsLinks } from "../utils/consts";
+import ArtistItem from "./ArtistItem";
 import Loader from "./Loader";
 
-export default function AlbumList() {
-  const [albums, setAlbums] = useState([]);
+export default function ArtistList() {
+  const [artists, setArtists] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
-    async function fetchAlbums() {
+    async function fetchArtists() {
       try {
         setIsLoading(true);
         const response = await fetch(
-          `https://api.spotify.com/v1/albums?ids=${albumLinks.join(",")}&market=KZ`,
+          `https://api.spotify.com/v1/artists?ids=${artistsLinks.join(",")}`,
           {
             method: "GET",
             headers: { Authorization: `Bearer ${ACCESS_TOKEN}` },
           }
         );
         const data = await response.json();
-        setAlbums(data.albums);
+        setArtists(data.artists);
       } catch (error) {
         console.log(error);
       } finally {
         setIsLoading(false);
       }
     }
-    fetchAlbums();
+    fetchArtists();
   }, []);
 
   return (
-    <div className="album-wrapper">
+    <div className="artist-wrapper">
       {isLoading ? (
         <Loader />
       ) : (
-        <div className="album-grid">
-          {albums.map(item => (
-            <AlbumItem
-              title={item.name}
-              author={item.artists[0].name}
-              imageUrl={item.images[0].url}
-              key={item.id}
-            />
+        <div className="artist-grid">
+          {artists.map(item => (
+            <ArtistItem key={item.id} name={item.name} imageUrl={item.images[0].url} />
           ))}
         </div>
       )}

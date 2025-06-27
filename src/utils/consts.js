@@ -1,4 +1,10 @@
-export const ACCESS_TOKEN = "";
+export const TOP_ALBUMS_PAGE_ROUTE = "/";
+export const TOP_ARTISTS_PAGE_ROUTE = "/top-artists";
+export const SETTINGS_PAGE_ROUTE = "/settings";
+
+export const ACCESS_TOKEN =
+  "BQAAy41D-I8WBwvC_5UpwP32_2f741d2ObgQd78hddsVdCvLpZ4yk9T-RQFuanp24LEMor2G1ScowM9OyTR93UXBvnpvCuj1q0m8AEOg9Z5-ZujwvTMPsKIOa24ZyO6APsPbVgU0vII";
+
 export const albumLinks = [
   "78bpIziExqiI9qztvNFlQu",
   "2ODvWsOgouMbaA5xf0RkJe",
@@ -20,4 +26,27 @@ export const albumLinks = [
   "2cWBwpqMsDJC1ZUwz813lo",
   "5Nwsra93UQYJ6xxcjcE10x",
   "6kf46HbnYCZzP6rjvQHYzg",
+];
+
+export const artistsLinks = [
+  "1Xyo4u8uXC1ZmMpatF05PJ",
+  "0du5cEVh5yTK9QJze8zA0C",
+  "66CXWjxzNUsdJxJ2JdwvnR",
+  "1HY2Jd0NmPuamShAr6KMms",
+  "6qqNVTkY8uBg9cP3Jd7DAH",
+  "1uNFoZAHBGtllmzznpCI3s",
+  "06HL4z0CvFAxyc27GXpf02",
+  "4gzpq5DPGxSnKTe4SA8HAU",
+  "4iHNK0tOyZPYnBU7nGAgpQ",
+  "6eUKZXaKkcviH0Ku9w2n3V",
+  "74KM79TiuVKeVCqs8QtB0B",
+  "5WUlDfRSoLAfcVSX1WnrxN",
+  "5pKCCKE2ajJHZ9KAiaK11H",
+  "2YZyLoL8N0Wb9xBt1NhZWg",
+  "7dGJo4pcD2V6oG8kP0tJRR",
+  "3TVXtAsR1Inumwj472S9r4",
+  "246dkjvS1zLTtiykXe5h60",
+  "0Y5tJX1MQlPlqiwlOH1tJY",
+  "5K4W6rqBFWDnAN6FQUkS6x",
+  "7CajNmpbOovFoOoasH2HaY",
 ];

@@ -1,118 +1,113 @@
-.album-wrapper {
+.artist-wrapper {
   flex-grow: 1;
   margin-top: 32px;
   overflow-y: scroll;
 }
 
-.album-wrapper::-webkit-scrollbar {
+.artist-wrapper::-webkit-scrollbar {
   width: 15px;
 }
 
-.album-wrapper::-webkit-scrollbar-track {
+.artist-wrapper::-webkit-scrollbar-track {
   background: var(--primary-color);
 }
 
-.album-wrapper::-webkit-scrollbar-thumb {
+.artist-wrapper::-webkit-scrollbar-thumb {
   background: var(--text);
   border-radius: 10px;
   border: 3px solid var(--primary-color);
 }
 
-.album-grid {
+.artist-grid {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-gap: 0 24px;
 }
 
-.album-item {
+.artist-item {
   padding: 12px;
   border-radius: 8px;
   cursor: pointer;
   transition: 0.3s ease;
 }
 
-.album-item:hover {
+.artist-item:hover {
   background: var(--secondary-color);
 }
 
-.album-poster {
+.artist-poster {
   width: 100%;
   aspect-ratio: 1/1;
-  border-radius: 8px;
+  border-radius: 50%;
 }
 
-.album-title {
+.artist-name {
   font-size: 18px;
   line-height: 24px;
   font-weight: 500;
   color: var(--light);
+  text-align: center;
 }
 
-.album-artist {
+.artist-type {
   margin-top: 4px;
   font-size: 15px;
   line-height: 18px;
   font-weight: 400;
   color: var(--text);
+  text-align: center;
 }
 
-.album-img {
+.artist-img {
   width: 240px;
   aspect-ratio: 1/1;
+  border-radius: 50%;
 }
 
-.album-header {
+.artist-header {
   display: flex;
   align-items: flex-end;
   justify-content: flex-start;
   gap: 24px;
 }
 
-.album-content {
+.artist-content {
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
 
-.album-content__type {
+.artist-content__verify {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
   color: var(--light);
   font-size: 14px;
   line-height: 14px;
   font-weight: 400;
 }
 
-.album-content__name {
+.artist-content__verify svg {
+  color: var(--blue);
+  font-size: 24px;
+}
+
+.artist-content__name {
   color: var(--light);
   font-size: 56px;
   line-height: 64px;
   font-weight: 900;
 }
 
-.album-content__author {
+.artist-content__audience {
   margin-top: 12px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   gap: 8px;
-}
-
-.album-content__circle {
-  width: 4px;
-  height: 4px;
-  background: var(--text);
-  border-radius: 100%;
-}
-
-.album-content__author p {
   font-size: 14px;
   line-height: 14px;
   font-weight: 400;
-  color: var(--text);
-}
-
-.album-content__author span {
-  font-size: 14px;
-  line-height: 14px;
-  font-weight: 700;
   color: var(--light);
 }

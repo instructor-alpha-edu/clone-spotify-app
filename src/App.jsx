@@ -1,6 +1,6 @@
 import Header from "./components/Header";
 import Sidebar from "./components/Sidebar";
-import AlbumList from "./components/AlbumList";
+import AppRouter from "./components/AppRouter";
 import "./assets/css/style.css";
 
 export default function App() {
@@ -9,7 +9,7 @@ export default function App() {
       <Header />
       <div className="container">
         <Sidebar />
-        <AlbumList />
+        <AppRouter />
       </div>
     </div>
   );
