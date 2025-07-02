@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { ACCESS_TOKEN, albumLinks } from "../utils/consts";
+import { albumLinks } from "../utils/consts";
 import AlbumItem from "./AlbumItem";
 import Loader from "./Loader";
 
@@ -15,7 +15,7 @@ export default function AlbumList() {
           `https://api.spotify.com/v1/albums?ids=${albumLinks.join(",")}&market=KZ`,
           {
             method: "GET",
-            headers: { Authorization: `Bearer ${ACCESS_TOKEN}` },
+            headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
           }
         );
         const data = await response.json();

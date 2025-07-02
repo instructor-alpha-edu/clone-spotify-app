@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import { PiSealCheckFill } from "react-icons/pi";
 import Loader from "../components/Loader";
-import { ACCESS_TOKEN } from "../utils/consts";
 import TrackItem from "../components/TrackItem";
 
 export default function SingleArtistPage() {
@@ -17,7 +16,7 @@ export default function SingleArtistPage() {
         setIsLoading(true);
         const responseArtist = await fetch(`https://api.spotify.com/v1/artists/${id}`, {
           method: "GET",
-          headers: { Authorization: `Bearer ${ACCESS_TOKEN}` },
+          headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
         });
         const dataArtist = await responseArtist.json();
         setArtistData(dataArtist);
@@ -26,7 +25,7 @@ export default function SingleArtistPage() {
           `https://api.spotify.com/v1/artists/${id}/top-tracks`,
           {
             method: "GET",
-            headers: { Authorization: `Bearer ${ACCESS_TOKEN}` },
+            headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
           }
         );
         const dataTopTracks = await responseTopTracks.json();

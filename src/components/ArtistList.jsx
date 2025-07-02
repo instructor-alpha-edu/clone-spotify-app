@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { ACCESS_TOKEN, artistsLinks } from "../utils/consts";
+import { artistsLinks } from "../utils/consts";
 import ArtistItem from "./ArtistItem";
 import Loader from "./Loader";
 
@@ -15,7 +15,7 @@ export default function ArtistList() {
           `https://api.spotify.com/v1/artists?ids=${artistsLinks.join(",")}`,
           {
             method: "GET",
-            headers: { Authorization: `Bearer ${ACCESS_TOKEN}` },
+            headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
           }
         );
         const data = await response.json();

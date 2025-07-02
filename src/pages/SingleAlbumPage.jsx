@@ -4,7 +4,6 @@ import { MdNumbers } from "react-icons/md";
 import { FaRegClock } from "react-icons/fa";
 import Loader from "../components/Loader";
 import TrackItem from "../components/TrackItem";
-import { ACCESS_TOKEN } from "../utils/consts";
 
 export default function SingleAlbumPage() {
   const [albumData, setAlbumData] = useState({});
@@ -17,7 +16,7 @@ export default function SingleAlbumPage() {
         setIsLoading(true);
         const response = await fetch(`https://api.spotify.com/v1/albums/${id}`, {
           method: "GET",
-          headers: { Authorization: `Bearer ${ACCESS_TOKEN}` },
+          headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
         });
         const data = await response.json();
         setAlbumData(data);
