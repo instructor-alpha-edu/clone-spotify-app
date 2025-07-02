@@ -1,9 +1,11 @@
 export const TOP_ALBUMS_PAGE_ROUTE = "/";
-export const TOP_ARTISTS_PAGE_ROUTE = "/top-artists";
+export const TOP_ARTISTS_PAGE_ROUTE = "/artists";
 export const SETTINGS_PAGE_ROUTE = "/settings";
+export const SINGLE_ALBUM_PAGE_ROUTE = "/albums/:id";
+export const SINGLE_ARTIST_PAGE_ROUTE = "/artists/:id";
 
 export const ACCESS_TOKEN =
-  "BQAAy41D-I8WBwvC_5UpwP32_2f741d2ObgQd78hddsVdCvLpZ4yk9T-RQFuanp24LEMor2G1ScowM9OyTR93UXBvnpvCuj1q0m8AEOg9Z5-ZujwvTMPsKIOa24ZyO6APsPbVgU0vII";
+  "BQC-MYsHqbpWimhdZCBysu2mPC2Qw-5QjNLikWaEjrNxCdJEbI3TFoy9s2U8VwTsJD3szoa7FUsj506W2EQ0UF4PGqEY7uFnqRCvPsFNy0pRVRCDUgJno6VrchHqNBiOBzIprp6gffQ";
 
 export const albumLinks = [
   "78bpIziExqiI9qztvNFlQu",

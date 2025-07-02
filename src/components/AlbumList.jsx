@@ -37,6 +37,7 @@ export default function AlbumList() {
         <div className="album-grid">
           {albums.map(item => (
             <AlbumItem
+              id={item.id}
               title={item.name}
               author={item.artists[0].name}
               imageUrl={item.images[0].url}

@@ -2,7 +2,15 @@ import NotFoundPage from "../pages/NotFoundPage";
 import SettingsPage from "../pages/SettingsPage";
 import TopAlbumsPage from "../pages/TopAlbumsPage";
 import TopArtistsPage from "../pages/TopArtistsPage";
-import { SETTINGS_PAGE_ROUTE, TOP_ALBUMS_PAGE_ROUTE, TOP_ARTISTS_PAGE_ROUTE } from "./consts";
+import SingleAlbumPage from "../pages/SingleAlbumPage";
+import {
+  SETTINGS_PAGE_ROUTE,
+  TOP_ALBUMS_PAGE_ROUTE,
+  TOP_ARTISTS_PAGE_ROUTE,
+  SINGLE_ALBUM_PAGE_ROUTE,
+  SINGLE_ARTIST_PAGE_ROUTE,
+} from "./consts";
+import SingleArtistPage from "../pages/SingleArtistPage";
 
 export const routes = [
   {
@@ -16,6 +24,14 @@ export const routes = [
   {
     path: SETTINGS_PAGE_ROUTE,
     element: SettingsPage,
+  },
+  {
+    path: SINGLE_ALBUM_PAGE_ROUTE,
+    element: SingleAlbumPage,
+  },
+  {
+    path: SINGLE_ARTIST_PAGE_ROUTE,
+    element: SingleArtistPage,
   },
   {
     path: "*",

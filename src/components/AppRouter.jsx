@@ -5,7 +5,7 @@ export default function AppRouter() {
   return (
     <Routes>
       {routes.map(route => (
-        <Route path={route.path} element={route.element()} />
+        <Route key={route.path} path={route.path} element={<route.element />} />
       ))}
     </Routes>
   );

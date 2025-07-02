@@ -36,7 +36,7 @@ export default function ArtistList() {
       ) : (
         <div className="artist-grid">
           {artists.map(item => (
-            <ArtistItem key={item.id} name={item.name} imageUrl={item.images[0].url} />
+            <ArtistItem key={item.id} id={item.id} name={item.name} imageUrl={item.images[0].url} />
           ))}
         </div>
       )}
