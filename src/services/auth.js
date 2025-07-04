@@ -1,3 +1,6 @@
+const clientId = import.meta.env.VITE_CLIENT_ID;
+const clientSecret = import.meta.env.VITE_CLIENT_SECRET;
+
 export async function fetchAccessToken() {
   try {
     const res = await fetch("https://accounts.spotify.com/api/token", {
@@ -7,8 +10,8 @@ export async function fetchAccessToken() {
       },
       body: new URLSearchParams({
         grant_type: "client_credentials",
-        client_id: "e1c7b7cfa564487e8a080395602af508",
-        client_secret: "2a6cb85eb5754b35939d48813aa45daa",
+        client_id: clientId,
+        client_secret: clientSecret,
       }),
     });
     const data = await res.json();
