@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { axiosInstance } from "../services/axios";
 import { artistsLinks } from "../utils/consts";
 import ArtistItem from "./ArtistItem";
 import Loader from "./Loader";
@@ -11,14 +12,7 @@ export default function ArtistList() {
     async function fetchArtists() {
       try {
         setIsLoading(true);
-        const response = await fetch(
-          `https://api.spotify.com/v1/artists?ids=${artistsLinks.join(",")}`,
-          {
-            method: "GET",
-            headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
-          }
-        );
-        const data = await response.json();
+        const { data } = await axiosInstance.get(`/artists?ids=${artistsLinks.join(",")}`);
         setArtists(data.artists);
       } catch (error) {
         console.log(error);

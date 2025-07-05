@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import { MdNumbers } from "react-icons/md";
 import { FaRegClock } from "react-icons/fa";
+import { axiosInstance } from "../services/axios";
 import Loader from "../components/Loader";
 import TrackItem from "../components/TrackItem";
 
@@ -14,13 +15,8 @@ export default function SingleAlbumPage() {
     async function fetchAlbumById() {
       try {
         setIsLoading(true);
-        const response = await fetch(`https://api.spotify.com/v1/albums/${id}`, {
-          method: "GET",
-          headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
-        });
-        const data = await response.json();
+        const { data } = await axiosInstance.get(`/albums/${id}`);
         setAlbumData(data);
-        console.log(data);
       } catch (e) {
         console.log(e);
       } finally {

@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { axiosInstance } from "../services/axios";
 import { albumLinks } from "../utils/consts";
 import AlbumItem from "./AlbumItem";
 import Loader from "./Loader";
@@ -11,14 +12,7 @@ export default function AlbumList() {
     async function fetchAlbums() {
       try {
         setIsLoading(true);
-        const response = await fetch(
-          `https://api.spotify.com/v1/albums?ids=${albumLinks.join(",")}&market=KZ`,
-          {
-            method: "GET",
-            headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
-          }
-        );
-        const data = await response.json();
+        const { data } = await axiosInstance.get(`/albums?ids=${albumLinks.join(",")}&market=KZ`);
         setAlbums(data.albums);
       } catch (error) {
         console.log(error);

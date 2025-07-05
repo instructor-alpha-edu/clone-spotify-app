@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import { PiSealCheckFill } from "react-icons/pi";
+import { axiosInstance } from "../services/axios";
 import Loader from "../components/Loader";
 import TrackItem from "../components/TrackItem";
 
@@ -14,23 +15,10 @@ export default function SingleArtistPage() {
     async function fetchArtistById() {
       try {
         setIsLoading(true);
-        const responseArtist = await fetch(`https://api.spotify.com/v1/artists/${id}`, {
-          method: "GET",
-          headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
-        });
-        const dataArtist = await responseArtist.json();
+        const { data: dataArtist } = await axiosInstance.get(`/artists/${id}`);
+        const { data: dataTopTracks } = await axiosInstance.get(`/artists/${id}/top-tracks`);
         setArtistData(dataArtist);
-
-        const responseTopTracks = await fetch(
-          `https://api.spotify.com/v1/artists/${id}/top-tracks`,
-          {
-            method: "GET",
-            headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
-          }
-        );
-        const dataTopTracks = await responseTopTracks.json();
         setTracks(dataTopTracks.tracks);
-        console.log(dataTopTracks);
       } catch (error) {
         console.log(error);
       } finally {
