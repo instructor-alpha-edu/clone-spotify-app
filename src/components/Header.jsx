@@ -2,10 +2,13 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router";
 import { FiSearch } from "react-icons/fi";
 import { GrHomeRounded } from "react-icons/gr";
+import { useTheme } from "../providers/ThemeProvider";
 import { SEARCH_PAGE_ROUTE, TOP_ALBUMS_PAGE_ROUTE } from "../utils/consts";
-import logo from "../assets/img/logo.svg";
+import lightLogo from "../assets/img/logo.svg";
+import darkLogo from "../assets/img/dark-logo.svg";
 
 export default function Header() {
+  const { isLightTheme } = useTheme();
   const [searchInput, setSearchInput] = useState("");
   const navigate = useNavigate();
 
@@ -20,7 +23,13 @@ export default function Header() {
   return (
     <div className="header">
       <div className="header-part">
-        <img src={logo} alt="Logo" width={32} height={32} className="header-img" />
+        <img
+          src={isLightTheme ? darkLogo : lightLogo}
+          alt="Logo"
+          width={32}
+          height={32}
+          className="header-img"
+        />
       </div>
       <div className="header-part">
         <Link to={TOP_ALBUMS_PAGE_ROUTE} className="home-btn">

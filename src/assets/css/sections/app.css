@@ -126,3 +126,12 @@ body {
 .search-list {
   margin-top: 40px;
 }
+
+.light {
+  --bg-color: var(--white) !important;
+  --primary-color: #f4f4f4;
+  --secondary-color: #dfdfdf;
+  --secondary-color-hover: #cecece;
+  --text: var(--dark-text);
+  --light: var(--dark-text);
+}
