@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import { useSearchParams } from "react-router";
 import { axiosInstance } from "../services/axios";
-import TrackItem from "../components/TrackItem";
-import Loader from "../components/Loader";
+import TrackItem from "../components/tracks/TrackItem";
+import Loader from "../components/shared/Loader";
 
 export default function SearchPage() {
   const [tracks, setTracks] = useState([]);

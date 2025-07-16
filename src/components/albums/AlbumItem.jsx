@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-import { SINGLE_ALBUM_PAGE_ROUTE } from "../utils/consts";
+import { SINGLE_ALBUM_PAGE_ROUTE } from "../../utils";
 
 export default function AlbumItem({ id, title, author, imageUrl }) {
   return (

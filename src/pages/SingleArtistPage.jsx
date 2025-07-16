@@ -1,32 +1,12 @@
-import { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import { PiSealCheckFill } from "react-icons/pi";
-import { axiosInstance } from "../services/axios";
-import Loader from "../components/Loader";
-import TrackItem from "../components/TrackItem";
+import Loader from "../components/shared/Loader";
+import TrackItem from "../components/tracks/TrackItem";
+import { useArtistById } from "../hooks/useArtistById";
 
 export default function SingleArtistPage() {
-  const [artistData, setArtistData] = useState({});
-  const [tracks, setTracks] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
   const { id } = useParams();
-
-  useEffect(() => {
-    async function fetchArtistById() {
-      try {
-        setIsLoading(true);
-        const { data: dataArtist } = await axiosInstance.get(`/artists/${id}`);
-        const { data: dataTopTracks } = await axiosInstance.get(`/artists/${id}/top-tracks`);
-        setArtistData(dataArtist);
-        setTracks(dataTopTracks.tracks);
-      } catch (error) {
-        console.log(error);
-      } finally {
-        setIsLoading(false);
-      }
-    }
-    fetchArtistById();
-  }, []);
+  const { artistData, tracks, isLoading } = useArtistById(id);
 
   if (isLoading) {
     return (

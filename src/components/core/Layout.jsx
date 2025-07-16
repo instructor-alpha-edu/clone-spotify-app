@@ -1,8 +1,8 @@
 import { useEffect } from "react";
 import classNames from "classnames";
-import Header from "./Header";
-import Sidebar from "./Sidebar";
-import { useTheme } from "../providers/ThemeProvider";
+import Header from "../layout/Header";
+import Sidebar from "../layout/Sidebar";
+import { useTheme } from "../../providers/ThemeProvider";
 
 export default function Layout({ children }) {
   const { isLightTheme } = useTheme();

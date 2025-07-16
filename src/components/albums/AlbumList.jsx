@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import { axiosInstance } from "../services/axios";
-import { albumLinks } from "../utils/consts";
+import { axiosInstance } from "../../services/axios";
+import { albumLinks } from "../../utils";
 import AlbumItem from "./AlbumItem";
-import Loader from "./Loader";
+import Loader from "../shared/Loader";
 
 export default function AlbumList() {
   const [albums, setAlbums] = useState([]);

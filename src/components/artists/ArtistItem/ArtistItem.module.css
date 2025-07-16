@@ -1,0 +1,33 @@
+.item {
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.item:hover {
+  background: var(--secondary-color);
+}
+
+.poster {
+  width: 100%;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+}
+
+.title {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 500;
+  color: var(--light);
+  text-align: center;
+}
+
+.type {
+  margin-top: 4px;
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: 400;
+  color: var(--text);
+  text-align: center;
+}

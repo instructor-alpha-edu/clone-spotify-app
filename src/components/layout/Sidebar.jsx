@@ -2,11 +2,7 @@ import { Link } from "react-router";
 import { IoIosAlbums } from "react-icons/io";
 import { HiMiniUsers } from "react-icons/hi2";
 import { IoMdSettings } from "react-icons/io";
-import {
-  SETTINGS_PAGE_ROUTE,
-  TOP_ALBUMS_PAGE_ROUTE,
-  TOP_ARTISTS_PAGE_ROUTE,
-} from "../utils/consts";
+import { SETTINGS_PAGE_ROUTE, TOP_ALBUMS_PAGE_ROUTE, TOP_ARTISTS_PAGE_ROUTE } from "../../utils";
 
 export default function Sidebar() {
   return (

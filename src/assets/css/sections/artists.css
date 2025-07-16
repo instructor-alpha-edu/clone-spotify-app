@@ -24,40 +24,6 @@
   grid-gap: 0 24px;
 }
 
-.artist-item {
-  padding: 12px;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: 0.3s ease;
-}
-
-.artist-item:hover {
-  background: var(--secondary-color);
-}
-
-.artist-poster {
-  width: 100%;
-  aspect-ratio: 1/1;
-  border-radius: 50%;
-}
-
-.artist-name {
-  font-size: 18px;
-  line-height: 24px;
-  font-weight: 500;
-  color: var(--light);
-  text-align: center;
-}
-
-.artist-type {
-  margin-top: 4px;
-  font-size: 15px;
-  line-height: 18px;
-  font-weight: 400;
-  color: var(--text);
-  text-align: center;
-}
-
 .artist-img {
   width: 240px;
   aspect-ratio: 1/1;

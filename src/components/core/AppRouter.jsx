@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router";
-import { routes } from "../utils/routes";
+import { routes } from "../../utils";
 
 export default function AppRouter() {
   return (

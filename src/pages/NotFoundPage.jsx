@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-import { TOP_ALBUMS_PAGE_ROUTE } from "../utils/consts";
+import { TOP_ALBUMS_PAGE_ROUTE } from "../utils";
 
 export default function NotFoundPage() {
   return (

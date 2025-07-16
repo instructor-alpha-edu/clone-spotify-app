@@ -3,8 +3,8 @@ import { useParams } from "react-router";
 import { MdNumbers } from "react-icons/md";
 import { FaRegClock } from "react-icons/fa";
 import { axiosInstance } from "../services/axios";
-import Loader from "../components/Loader";
-import TrackItem from "../components/TrackItem";
+import Loader from "../components/shared/Loader";
+import TrackItem from "../components/tracks/TrackItem";
 
 export default function SingleAlbumPage() {
   const [albumData, setAlbumData] = useState({});

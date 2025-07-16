@@ -1,4 +1,4 @@
-import { convertMsToTime } from "../utils/utils";
+import { convertMsToTime } from "../../utils";
 
 export default function TrackItem({ index, title, author, duration, posterUrl }) {
   const classNames = posterUrl ? "track-line track-line__extended" : "track-line";

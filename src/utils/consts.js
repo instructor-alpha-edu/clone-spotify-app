@@ -5,9 +5,6 @@ export const SINGLE_ALBUM_PAGE_ROUTE = "/albums/:id";
 export const SINGLE_ARTIST_PAGE_ROUTE = "/artists/:id";
 export const SEARCH_PAGE_ROUTE = "/search";
 
-export const ACCESS_TOKEN =
-  "BQC-MYsHqbpWimhdZCBysu2mPC2Qw-5QjNLikWaEjrNxCdJEbI3TFoy9s2U8VwTsJD3szoa7FUsj506W2EQ0UF4PGqEY7uFnqRCvPsFNy0pRVRCDUgJno6VrchHqNBiOBzIprp6gffQ";
-
 export const albumLinks = [
   "78bpIziExqiI9qztvNFlQu",
   "2ODvWsOgouMbaA5xf0RkJe",

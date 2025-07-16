@@ -2,10 +2,10 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router";
 import { FiSearch } from "react-icons/fi";
 import { GrHomeRounded } from "react-icons/gr";
-import { useTheme } from "../providers/ThemeProvider";
-import { SEARCH_PAGE_ROUTE, TOP_ALBUMS_PAGE_ROUTE } from "../utils/consts";
-import lightLogo from "../assets/img/logo.svg";
-import darkLogo from "../assets/img/dark-logo.svg";
+import { useTheme } from "../../providers/ThemeProvider";
+import { SEARCH_PAGE_ROUTE, TOP_ALBUMS_PAGE_ROUTE } from "../../utils";
+import lightLogo from "../../assets/img/logo.svg";
+import darkLogo from "../../assets/img/dark-logo.svg";
 
 export default function Header() {
   const { isLightTheme } = useTheme();

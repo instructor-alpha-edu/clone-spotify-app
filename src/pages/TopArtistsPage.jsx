@@ -1,4 +1,4 @@
-import ArtistList from "../components/ArtistList";
+import ArtistList from "../components/artists/ArtistList";
 
 export default function TopArtistsPage() {
   return (
